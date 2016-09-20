@@ -1,4 +1,4 @@
-defmodule TeamOrganization.ErrorHelpers do
+defmodule Ideation.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule TeamOrganization.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(TeamOrganization.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Ideation.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(TeamOrganization.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Ideation.Gettext, "errors", msg, opts)
     end
   end
 end

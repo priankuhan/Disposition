@@ -1,3 +1,3 @@
-defmodule TeamOrganization.LayoutViewTest do
-  use TeamOrganization.ConnCase, async: true
+defmodule Ideation.LayoutViewTest do
+  use Ideation.ConnCase, async: true
 end

@@ -6,18 +6,22 @@
 use Mix.Config
 
 # General application configuration
-config :team_organization,
-  ecto_repos: [TeamOrganization.Repo]
-
-
+config :ideation,
+  ecto_repos: [Ideation.Repo]
 
 # Configures the endpoint
-config :team_organization, TeamOrganization.Endpoint,
+config :ideation, Ideation.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: TeamOrganization.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: TeamOrganization.PubSub,
+  render_errors: [view: Ideation.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Ideation.PubSub,
            adapter: Phoenix.PubSub.PG2]
            
+config :guardian, Guardian,
+  issuer: "Ideation",
+  ttl: { 3, :days },
+  verify_issuer: true,
+  secret_key: "EKgeCZ1ND6Yw1TJD7F5blZHl8ZVI843uj3hQT2TI4xgkb1AgPEI0Nbs0sK19Wn",
+  serializer: Ideation.GuardianSerializer
 
 # Configures Elixir's Logger
 config :logger, :console,

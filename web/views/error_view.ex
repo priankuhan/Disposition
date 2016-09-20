@@ -1,5 +1,5 @@
-defmodule TeamOrganization.ErrorView do
-  use TeamOrganization.Web, :view
+defmodule Ideation.ErrorView do
+  use Ideation.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,4 +1,4 @@
-defmodule TeamOrganization.ConnCase do
+defmodule Ideation.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,23 +20,23 @@ defmodule TeamOrganization.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias TeamOrganization.Repo
+      alias Ideation.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import TeamOrganization.Router.Helpers
+      import Ideation.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint TeamOrganization.Endpoint
+      @endpoint Ideation.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TeamOrganization.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Ideation.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(TeamOrganization.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Ideation.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

@@ -1,5 +1,4 @@
-# Team Organization App
+# Radiator
 
-Just built this to learn and practice some new technologies like 
-Elixir, Phoenix, React, Redux and Webpack
-
+An ideation platform 
+Just built this to learn and practice Elixir, Phoenix, React, and Redux

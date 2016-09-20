@@ -1,5 +1,5 @@
-defmodule TeamOrganization.Router do
-  use TeamOrganization.Web, :router
+defmodule Ideation.Router do
+  use Ideation.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -8,19 +8,22 @@ defmodule TeamOrganization.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
-
+  
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", TeamOrganization do
-    pipe_through :browser # Use the default browser stack
+  scope "/", Ideation do
+    pipe_through :browser 
 
-    get "/", PageController, :index
+    get "*path", PageController, :index
   end
+  
+  scope "/api", Ideation do
+    pipe_through :api
 
-  # Other scopes may use custom stacks.
-  # scope "/api", TeamOrganization do
-  #   pipe_through :api
-  # end
+    scope "/v1" do
+      post "/users", UserController, :create
+    end
+  end
 end

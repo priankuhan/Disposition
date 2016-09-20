@@ -1,14 +1,14 @@
-defmodule TeamOrganization.Endpoint do
-  use Phoenix.Endpoint, otp_app: :team_organization
+defmodule Ideation.Endpoint do
+  use Phoenix.Endpoint, otp_app: :ideation
 
-  socket "/socket", TeamOrganization.UserSocket
+  socket "/socket", Ideation.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :team_organization, gzip: false,
+    at: "/", from: :ideation, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,8 +35,8 @@ defmodule TeamOrganization.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_team_organization_key",
+    key: "_ideation_key",
     signing_salt: "roquMueG"
 
-  plug TeamOrganization.Router
+  plug Ideation.Router
 end

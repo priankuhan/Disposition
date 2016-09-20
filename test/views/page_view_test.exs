@@ -1,3 +1,3 @@
-defmodule TeamOrganization.PageViewTest do
-  use TeamOrganization.ConnCase, async: true
+defmodule Ideation.PageViewTest do
+  use Ideation.ConnCase, async: true
 end

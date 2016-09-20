@@ -1,12 +1,12 @@
-defmodule TeamOrganization.Web do
+defmodule Ideation.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use TeamOrganization.Web, :controller
-      use TeamOrganization.Web, :view
+      use Ideation.Web, :controller
+      use Ideation.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule TeamOrganization.Web do
     quote do
       use Phoenix.Controller
 
-      alias TeamOrganization.Repo
+      alias Ideation.Repo
       import Ecto
       import Ecto.Query
 
-      import TeamOrganization.Router.Helpers
-      import TeamOrganization.Gettext
+      import Ideation.Router.Helpers
+      import Ideation.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule TeamOrganization.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import TeamOrganization.Router.Helpers
-      import TeamOrganization.ErrorHelpers
-      import TeamOrganization.Gettext
+      import Ideation.Router.Helpers
+      import Ideation.ErrorHelpers
+      import Ideation.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule TeamOrganization.Web do
     quote do
       use Phoenix.Channel
 
-      alias TeamOrganization.Repo
+      alias Ideation.Repo
       import Ecto
       import Ecto.Query
-      import TeamOrganization.Gettext
+      import Ideation.Gettext
     end
   end
 

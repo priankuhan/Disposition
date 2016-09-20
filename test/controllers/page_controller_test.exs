@@ -1,5 +1,5 @@
-defmodule TeamOrganization.PageControllerTest do
-  use TeamOrganization.ConnCase
+defmodule Ideation.PageControllerTest do
+  use Ideation.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

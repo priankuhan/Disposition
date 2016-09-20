@@ -1,8 +1,8 @@
-defmodule TeamOrganization.Mixfile do
+defmodule Ideation.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :team_organization,
+    [app: :ideation,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,9 +17,9 @@ defmodule TeamOrganization.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {TeamOrganization, []},
+    [mod: {Ideation, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,9 @@ defmodule TeamOrganization.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:guardian, "~> 0.12.0"},
+     {:cowboy, "~> 1.0"},
+     {:comeonin, "~> 2.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

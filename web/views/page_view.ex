@@ -1,3 +1,3 @@
-defmodule TeamOrganization.PageView do
-  use TeamOrganization.Web, :view
+defmodule Ideation.PageView do
+  use Ideation.Web, :view
 end
