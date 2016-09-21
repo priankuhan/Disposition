@@ -1,3 +1,3 @@
-defmodule Ideation.LayoutViewTest do
-  use Ideation.ConnCase, async: true
+defmodule Disposition.LayoutViewTest do
+  use Disposition.ConnCase, async: true
 end

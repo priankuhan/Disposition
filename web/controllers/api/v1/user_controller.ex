@@ -1,7 +1,7 @@
-defmodule Ideation.UserController do
-  use Ideation.Web, :controller 
+defmodule Disposition.UserController do
+  use Disposition.Web, :controller 
   
-  alias Ideation.{User, Repo}
+  alias Disposition.{User, Repo}
   
   plug :scrub_params, "user" when action in [:create]
   
@@ -14,12 +14,12 @@ defmodule Ideation.UserController do
 
         conn
         |> put_status(:created)
-        |> render(Ideation.UserSessionView, "show.json", jwt: jwt, user: user)
+        |> render(Disposition.UserSessionView, "show.json", jwt: jwt, user: user)
 
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(Ideation.UserView, "error.json", changeset: changeset)
+        |> render(Disposition.UserView, "error.json", changeset: changeset)
     end
   end
 end

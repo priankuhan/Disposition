@@ -1,4 +1,4 @@
-defmodule Ideation.Repo.Migrations.CreateUser do
+defmodule Disposition.Repo.Migrations.CreateUser do
   use Ecto.Migration
 
   def change do

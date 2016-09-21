@@ -1,5 +1,5 @@
-defmodule Ideation.UserView do
-  use Ideation.Web, :view
+defmodule Disposition.UserView do
+  use Disposition.Web, :view
 
   def render("error.json", %{changeset: changeset}) do
     errors = Enum.map(changeset.errors, fn {field, detail} ->

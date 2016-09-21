@@ -1,3 +1,3 @@
-defmodule Ideation.PageViewTest do
-  use Ideation.ConnCase, async: true
+defmodule Disposition.PageViewTest do
+  use Disposition.ConnCase, async: true
 end

@@ -1,3 +1,3 @@
-defmodule Ideation.PageView do
-  use Ideation.Web, :view
+defmodule Disposition.PageView do
+  use Disposition.Web, :view
 end

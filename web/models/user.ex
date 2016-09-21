@@ -1,5 +1,5 @@
-defmodule Ideation.User do
-  use Ideation.Web, :model
+defmodule Disposition.User do
+  use Disposition.Web, :model
   import Comeonin.Bcrypt, only: [hashpwsalt: 1]
   
   schema "users" do

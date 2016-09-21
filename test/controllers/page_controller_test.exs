@@ -1,5 +1,5 @@
-defmodule Ideation.PageControllerTest do
-  use Ideation.ConnCase
+defmodule Disposition.PageControllerTest do
+  use Disposition.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

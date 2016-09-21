@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :ideation, Ideation.Endpoint,
+config :disposition, Disposition.Endpoint,
   http: [port: 8080],
   debug_errors: true,
   code_reloader: true,
@@ -17,7 +17,7 @@ config :ideation, Ideation.Endpoint,
 
 
 # Watch static and templates for browser reloading.
-config :ideation, Ideation.Endpoint,
+config :disposition, Disposition.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -35,11 +35,11 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :ideation, Ideation.Repo,
+config :disposition, Disposition.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "ideation_dev",
+  database: "disposition_dev",
   hostname: "localhost",
   template: "template0",
   pool_size: 10

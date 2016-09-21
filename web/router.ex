@@ -1,5 +1,5 @@
-defmodule Ideation.Router do
-  use Ideation.Web, :router
+defmodule Disposition.Router do
+  use Disposition.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,13 +13,13 @@ defmodule Ideation.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Ideation do
+  scope "/", Disposition do
     pipe_through :browser 
 
     get "*path", PageController, :index
   end
   
-  scope "/api", Ideation do
+  scope "/api", Disposition do
     pipe_through :api
 
     scope "/v1" do

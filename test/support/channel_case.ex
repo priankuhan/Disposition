@@ -1,4 +1,4 @@
-defmodule Ideation.ChannelCase do
+defmodule Disposition.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule Ideation.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias Ideation.Repo
+      alias Disposition.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint Ideation.Endpoint
+      @endpoint Disposition.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Ideation.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Disposition.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Ideation.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Disposition.Repo, {:shared, self()})
     end
 
     :ok

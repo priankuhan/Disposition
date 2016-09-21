@@ -1,7 +1,7 @@
-defmodule Ideation.UserTest do
-  use Ideation.ModelCase
+defmodule Disposition.UserTest do
+  use Disposition.ModelCase
 
-  alias Ideation.User
+  alias Disposition.User
 
   @valid_attrs %{email: "some content", encrypted_password: "some content", first_name: "some content", last_name: "some content"}
   @invalid_attrs %{}

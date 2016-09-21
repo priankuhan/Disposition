@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="priankuhan@gmail.com">
 
-    <title>Ideation Pad</title>
+    <title>Disposition Pad</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/application.css") %>">
   </head>
 

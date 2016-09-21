@@ -1,5 +1,5 @@
 {
-  "name": "ideation",
+  "name": "disposition",
   "version": "1.0.0",
   "description": "Just built this to learn and practice Elixir, Phoenix, React, Redux and Webpack",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/priankuhan/ideation.git"
+    "url": "git+https://github.com/priankuhan/disposition.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/priankuhan/ideation/issues"
+    "url": "https://github.com/priankuhan/disposition/issues"
   },
-  "homepage": "https://github.com/priankuhan/ideation#readme",
+  "homepage": "https://github.com/priankuhan/disposition#readme",
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",

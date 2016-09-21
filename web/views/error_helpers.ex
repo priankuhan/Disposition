@@ -1,4 +1,4 @@
-defmodule Ideation.ErrorHelpers do
+defmodule Disposition.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule Ideation.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Ideation.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Disposition.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Ideation.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Disposition.Gettext, "errors", msg, opts)
     end
   end
 end

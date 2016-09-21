@@ -1,5 +1,5 @@
-defmodule Ideation.ErrorView do
-  use Ideation.Web, :view
+defmodule Disposition.ErrorView do
+  use Disposition.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

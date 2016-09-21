@@ -1,12 +1,12 @@
-defmodule Ideation.Web do
+defmodule Disposition.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use Ideation.Web, :controller
-      use Ideation.Web, :view
+      use Disposition.Web, :controller
+      use Disposition.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule Ideation.Web do
     quote do
       use Phoenix.Controller
 
-      alias Ideation.Repo
+      alias Disposition.Repo
       import Ecto
       import Ecto.Query
 
-      import Ideation.Router.Helpers
-      import Ideation.Gettext
+      import Disposition.Router.Helpers
+      import Disposition.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule Ideation.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import Ideation.Router.Helpers
-      import Ideation.ErrorHelpers
-      import Ideation.Gettext
+      import Disposition.Router.Helpers
+      import Disposition.ErrorHelpers
+      import Disposition.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule Ideation.Web do
     quote do
       use Phoenix.Channel
 
-      alias Ideation.Repo
+      alias Disposition.Repo
       import Ecto
       import Ecto.Query
-      import Ideation.Gettext
+      import Disposition.Gettext
     end
   end
 
