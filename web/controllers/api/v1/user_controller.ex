@@ -22,4 +22,5 @@ defmodule Disposition.UserController do
         |> render(Disposition.UserView, "error.json", changeset: changeset)
     end
   end
+
 end

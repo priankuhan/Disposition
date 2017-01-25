@@ -2,17 +2,19 @@ defmodule Disposition.User do
   use Disposition.Web, :model
   import Comeonin.Bcrypt, only: [hashpwsalt: 1]
   
+  @derive {Poison.Encoder, only: [:id, :first_name, :last_name, :email]}
   schema "users" do
     field :first_name, :string
     field :last_name, :string
     field :password, :string, virtual: true
     field :email, :string
     field :encrypted_password, :string
+    has_many :projects, Disposition.Project
+    has_many :user_projects, Disposition.UserProject
+    has_many :guest_projects, through: [:user_projects, :project]
 
     timestamps()
   end
-  
-  @derive {Poison.Encoder, only: [:id, :first_name, :last_name, :email]}
   
   @fields ~w(first_name last_name email password encrypted_password)a
   @required_fields ~w(first_name last_name email password)a

@@ -1,0 +1,64 @@
+.signin, .signup
+  background: $orange
+  background-size: cover
+  position: relative
+  height: 100%
+
+  main
+    +transform(translate(-50%, -50%))
+    position: absolute
+    width: 850px
+    top: 45%
+    left: 50%
+    text-align: center
+
+    header
+      text-align: center
+      margin-bottom: 20px
+      color: #fff
+      
+      .title
+        font-size: 6em
+        
+      .description 
+        margin-top: -10px
+        font-size: 1.3em
+        padding-bottom: 20px
+
+      .logo
+        display: inline-block
+        background: url(/images/logo.png) 0 0 no-repeat
+        background-size: contain
+        height: 62px
+        width: 198px
+        vertical-align: middle
+
+  form
+    margin-bottom: $base-spacing
+    .error
+      color: #fff
+    .field
+      margin: .5em 0
+
+    [type="text"], [type="email"], [type="password"], button
+      border: 0px none
+      width: 350px
+      padding: 1em
+      font-size: 1.1em
+
+    button
+      +transition
+      background: transparent
+      color: #fff
+      border: 1px solid #fff
+
+      &:hover
+        color: $orange
+        background: #fff
+
+  a
+    +transition
+    color: rgba(#fff, .7)
+
+    &:hover
+      color: #fff

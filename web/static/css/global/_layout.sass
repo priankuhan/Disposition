@@ -1,0 +1,46 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - layout
+// global layout classes - height, width, padding, margin, etc.
+
+html
+  height: 100vh
+  body
+    height: 100%
+
+    #main_container
+      height: 100%
+      > div
+        height: 100%
+
+    #main_footer
+      text-align: center
+      small
+        line-height: 40px
+        color: rgba(#fff, .5)
+
+        a
+          +transition
+          color: $gray
+          &:hover
+            color: #fff
+
+
+    .application-container
+      height: auto
+
+
+    .main-container
+      +display(flex)
+      height: calc(100% - 65px)
+      margin-top: $header-height 
+
+      .view-container
+        flex: 1
+        padding: 0 $base-spacing
+        height: calc(100% - 3em)
+
+        .view-header
+          padding: $base-spacing/2 0
+
+          h3
+            margin-bottom: 0
